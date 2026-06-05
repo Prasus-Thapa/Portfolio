@@ -3,153 +3,317 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prasus Thapa — Portfolio</title>
+    <title>Prasus Thapa — Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Custom cursor -->
+    <div class="cur-dot" id="curDot"></div>
+    <div class="cur-ring" id="curRing"></div>
 
     <!-- NAV -->
     <nav id="navbar">
         <a class="nav-logo" href="#hero">PT.</a>
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about"    class="nav-link">About</a></li>
+            <li><a href="#skills"   class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact"  class="nav-link">Contact</a></li>
         </ul>
+        <a href="mailto:prasusthapa@email.com" class="btn-hire">Hire Me ↗</a>
     </nav>
 
-    <!-- HERO -->
+    <!-- ── HERO ── -->
     <section id="hero">
-        <div class="hero-content">
-            <div class="hero-badge">👋 Open to opportunities</div>
-            <h1 class="hero-name">Prasus Thapa</h1>
-            <p class="hero-role">
-                <span id="typed-text"></span><span class="cursor"></span>
-            </p>
-            <p class="hero-desc">
-                Building clean, functional software — from web apps to desktop tools.
-                Passionate about turning ideas into working code.
-            </p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work &rarr;</a>
-                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        <div class="hero-wrap">
+            <div class="hero-inner">
+
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <span class="badge-pulse"></span>
+                        Available for work
+                    </div>
+
+                    <h1 class="hero-name">
+                        <span class="lw"><span class="li">Prasus</span></span>
+                        <span class="lw"><span class="li" style="--d:.1s">Thapa<span class="gold">.</span></span></span>
+                    </h1>
+
+                    <p class="hero-sub">
+                        Web Developer &amp; Student crafting<br>
+                        clean, functional digital experiences.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="mailto:prasusthapa@email.com" class="btn-primary">
+                            Hire Me
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg>
+                        </a>
+                        <a href="#" class="btn-ghost">Download CV</a>
+                    </div>
+
+                    <div class="hero-socials">
+                        <a href="https://github.com/Thapa896" target="_blank" class="soc-link">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                        <a href="https://linkedin.com/in/prasus-thapa" target="_blank" class="soc-link">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            LinkedIn
+                        </a>
+                        <a href="mailto:prasusthapa@email.com" class="soc-link">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+                            Email
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-photo">
+                    <div class="photo-frame">
+                        <img src="images/img2.jpg" alt="Prasus Thapa">
+                    </div>
+                    <div class="photo-deco-ring"></div>
+                </div>
+
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-val">4<sup>+</sup></span>
+                    <span class="stat-key">Projects Done</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-val">2<sup>+</sup></span>
+                    <span class="stat-key">Years Learning</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-val">3</span>
+                    <span class="stat-key">Tech Stacks</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- MARQUEE -->
+    <div class="marquee-wrap" aria-hidden="true">
+        <div class="marquee-track">
+            <span>Web Development</span><span class="mdot">·</span>
+            <span>UI Design</span><span class="mdot">·</span>
+            <span>Clean Code</span><span class="mdot">·</span>
+            <span>Problem Solving</span><span class="mdot">·</span>
+            <span>Java &amp; Python</span><span class="mdot">·</span>
+            <span>Open to Work</span><span class="mdot">·</span>
+            <span>Web Development</span><span class="mdot">·</span>
+            <span>UI Design</span><span class="mdot">·</span>
+            <span>Clean Code</span><span class="mdot">·</span>
+            <span>Problem Solving</span><span class="mdot">·</span>
+            <span>Java &amp; Python</span><span class="mdot">·</span>
+            <span>Open to Work</span><span class="mdot">·</span>
+        </div>
+    </div>
+
+    <!-- ── ABOUT ── -->
     <section id="about">
-        <div class="section-inner">
-            <div class="about-grid">
-                <div class="about-avatar reveal">👨‍💻</div>
-                <div class="about-text">
-                    <p class="section-label reveal">About Me</p>
-                    <h2 class="section-title reveal reveal-d1">Hey, I'm Prasus.</h2>
-                    <p class="reveal reveal-d2">
-                        I'm a web developer and student with a love for building things that work well.
-                        Whether it's a full-featured desktop app or a clean web project, I enjoy the whole
-                        process — from idea to deployment.
+        <div class="s-inner">
+            <div class="s-header reveal">
+                <span class="s-num">01</span>
+                <h2 class="s-title">About Me</h2>
+            </div>
+            <div class="about-body">
+                <div class="about-main reveal">
+                    <p class="about-lead">
+                        I'm <strong>Prasus Thapa</strong>, a passionate web developer
+                        and student who loves building things that actually work.
                     </p>
-                    <p class="reveal reveal-d3">
-                        Currently focused on sharpening my full-stack skills, exploring new technologies,
-                        and working on personal projects that solve real problems.
+                    <p class="about-copy">
+                        Whether it's a full desktop application or a polished web experience,
+                        I enjoy the entire journey from concept to deployment. Currently sharpening
+                        my skills across web development, software engineering, and UI design —
+                        always looking for new challenges and opportunities to grow.
                     </p>
-                    <div class="reveal reveal-d4" style="margin-top: 28px;">
-                        <a href="#contact" class="btn btn-primary">Say Hello &rarr;</a>
+                    <div class="about-tags">
+                        <span class="a-tag">Web Developer</span>
+                        <span class="a-tag">Student</span>
+                        <span class="a-tag">Tech Enthusiast</span>
+                        <span class="a-tag">Problem Solver</span>
+                    </div>
+                </div>
+                <div class="about-aside reveal">
+                    <div class="aside-row">
+                        <span class="aside-label">Location</span>
+                        <span class="aside-val">Nepal</span>
+                    </div>
+                    <div class="aside-row">
+                        <span class="aside-label">Focus</span>
+                        <span class="aside-val">Web Development</span>
+                    </div>
+                    <div class="aside-row">
+                        <span class="aside-label">Status</span>
+                        <span class="aside-val aside-available">
+                            <span class="avail-dot"></span>Available for work
+                        </span>
+                    </div>
+                    <div class="aside-row">
+                        <span class="aside-label">Education</span>
+                        <span class="aside-val">Computer Science</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SKILLS -->
+    <!-- ── SKILLS ── -->
     <section id="skills">
-        <div class="section-inner">
-            <p class="section-label reveal">What I work with</p>
-            <h2 class="section-title reveal reveal-d1">Skills &amp; Tools</h2>
-            <p class="section-subtitle reveal reveal-d2">Technologies I use to build projects and solve problems.</p>
+        <div class="s-inner">
+            <div class="s-header reveal">
+                <span class="s-num">02</span>
+                <h2 class="s-title">Skills &amp; Tools</h2>
+            </div>
             <div class="skills-grid">
-                <div class="skill-card reveal reveal-d1"><div class="skill-icon">🌐</div><div class="skill-name">HTML &amp; CSS</div></div>
-                <div class="skill-card reveal reveal-d2"><div class="skill-icon">⚡</div><div class="skill-name">JavaScript</div></div>
-                <div class="skill-card reveal reveal-d3"><div class="skill-icon">🐍</div><div class="skill-name">Python</div></div>
-                <div class="skill-card reveal reveal-d4"><div class="skill-icon">☕</div><div class="skill-name">Java</div></div>
-                <div class="skill-card reveal reveal-d5"><div class="skill-icon">🗄️</div><div class="skill-name">Databases</div></div>
-                <div class="skill-card reveal reveal-d6"><div class="skill-icon">🔧</div><div class="skill-name">Git &amp; GitHub</div></div>
-                <div class="skill-card reveal reveal-d7"><div class="skill-icon">🎨</div><div class="skill-name">UI Design</div></div>
-                <div class="skill-card reveal reveal-d8"><div class="skill-icon">💡</div><div class="skill-name">Problem Solving</div></div>
+                <div class="sk-item reveal">
+                    <span class="sk-icon sk-duo"><i class="devicon-html5-plain colored"></i><i class="devicon-css3-plain colored"></i></span>
+                    <span class="sk-name">HTML &amp; CSS</span>
+                </div>
+                <div class="sk-item reveal">
+                    <span class="sk-icon"><i class="devicon-javascript-plain colored"></i></span>
+                    <span class="sk-name">JavaScript</span>
+                </div>
+                <div class="sk-item reveal">
+                    <span class="sk-icon"><i class="devicon-python-plain colored"></i></span>
+                    <span class="sk-name">Python</span>
+                </div>
+                <div class="sk-item reveal">
+                    <span class="sk-icon"><i class="devicon-java-plain colored"></i></span>
+                    <span class="sk-name">Java</span>
+                </div>
+                <div class="sk-item reveal">
+                    <span class="sk-icon"><i class="devicon-mysql-plain colored"></i></span>
+                    <span class="sk-name">Databases</span>
+                </div>
+                <div class="sk-item reveal">
+                    <span class="sk-icon"><i class="devicon-git-plain colored"></i></span>
+                    <span class="sk-name">Git &amp; GitHub</span>
+                </div>
+                <div class="sk-item reveal">
+                    <span class="sk-icon">
+                        <svg width="28" height="42" viewBox="0 0 38 57" fill="none">
+                            <path d="M0 9.5C0 4.25 4.25 0 9.5 0H19v19H9.5C4.25 19 0 14.75 0 9.5z" fill="#F24E1E"/>
+                            <path d="M19 0h9.5C33.75 0 38 4.25 38 9.5S33.75 19 28.5 19H19V0z" fill="#FF7262"/>
+                            <path d="M0 28.5C0 23.25 4.25 19 9.5 19H19v19H9.5C4.25 38 0 33.75 0 28.5z" fill="#A259FF"/>
+                            <path d="M38 28.5C38 33.75 33.75 38 28.5 38S19 33.75 19 28.5 23.25 19 28.5 19 38 23.25 38 28.5z" fill="#1ABCFE"/>
+                            <path d="M19 38H9.5C4.25 38 0 42.25 0 47.5S4.25 57 9.5 57 19 52.75 19 47.5V38z" fill="#0ACF83"/>
+                        </svg>
+                    </span>
+                    <span class="sk-name">UI Design</span>
+                </div>
+                <div class="sk-item reveal">
+                    <span class="sk-icon"><i class="devicon-react-original colored"></i></span>
+                    <span class="sk-name">React</span>
+                </div>
+                <div class="sk-item reveal">
+                    <span class="sk-icon"><i class="devicon-spring-plain colored"></i></span>
+                    <span class="sk-name">Spring Boot</span>
+                </div>
+                <div class="sk-item reveal">
+                    <span class="sk-icon">
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#f0eeeb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 21h6M12 3a6 6 0 0 1 4.243 10.243C15.126 14.36 15 15.18 15 16H9c0-.82-.126-1.64-1.243-2.757A6 6 0 0 1 12 3z"/>
+                            <line x1="9" y1="19" x2="15" y2="19"/>
+                        </svg>
+                    </span>
+                    <span class="sk-name">Problem Solving</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- ── PROJECTS ── -->
     <section id="projects">
-        <div class="section-inner">
-            <p class="section-label reveal">What I've built</p>
-            <h2 class="section-title reveal reveal-d1">Projects</h2>
-            <p class="section-subtitle reveal reveal-d2">A selection of things I've worked on.</p>
-            <div class="projects-grid">
-                <div class="project-card reveal reveal-d1">
-                    <span class="project-tag">Java · Swing</span>
-                    <h3>Gym Management System</h3>
-                    <p>A desktop application for managing gym memberships, tracking members, and handling payments — built with Java Swing.</p>
-                    <div class="project-card-footer">
-                        <a href="https://github.com/Thapa896" class="project-link" target="_blank">View on GitHub &rarr;</a>
+        <div class="s-inner">
+            <div class="s-header reveal">
+                <span class="s-num">03</span>
+                <h2 class="s-title">Projects</h2>
+            </div>
+            <div class="proj-list">
+
+                <div class="proj-row reveal">
+                    <span class="pnum">01</span>
+                    <div class="pinfo">
+                        <h3 class="pname">Gym Management System</h3>
+                        <p class="pdesc">Desktop application for managing gym memberships, tracking members, and handling payments.</p>
                     </div>
+                    <span class="ptag">Java · Swing</span>
+                    <a href="https://github.com/Thapa896" target="_blank" class="parrow" aria-label="View on GitHub">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg>
+                    </a>
                 </div>
-                <div class="project-card reveal reveal-d2">
-                    <span class="project-tag">Python</span>
-                    <h3>WeCare Product System</h3>
-                    <p>A Python-based product management system with inventory tracking and care product cataloguing functionality.</p>
-                    <div class="project-card-footer">
-                        <a href="https://github.com/Thapa896" class="project-link" target="_blank">View on GitHub &rarr;</a>
+
+                <div class="proj-row reveal">
+                    <span class="pnum">02</span>
+                    <div class="pinfo">
+                        <h3 class="pname">WeCare Product System</h3>
+                        <p class="pdesc">Product management system with inventory tracking and care product cataloguing functionality.</p>
                     </div>
+                    <span class="ptag">Python</span>
+                    <a href="https://github.com/Thapa896" target="_blank" class="parrow" aria-label="View on GitHub">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg>
+                    </a>
                 </div>
-                <div class="project-card reveal reveal-d3">
-                    <span class="project-tag">Web Project</span>
-                    <h3>Urban Drive Solutions</h3>
-                    <p>A web-based solution for urban driving needs — featuring a clean UI and practical functionality built for real-world use.</p>
-                    <div class="project-card-footer">
-                        <a href="https://github.com/Thapa896" class="project-link" target="_blank">View on GitHub &rarr;</a>
+
+                <div class="proj-row reveal">
+                    <span class="pnum">03</span>
+                    <div class="pinfo">
+                        <h3 class="pname">Urban Drive Solutions</h3>
+                        <p class="pdesc">Web-based solution for urban driving needs with a clean UI and practical real-world functionality.</p>
                     </div>
+                    <span class="ptag">Web Project</span>
+                    <a href="https://github.com/Thapa896" target="_blank" class="parrow" aria-label="View on GitHub">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg>
+                    </a>
                 </div>
-                <div class="project-card reveal reveal-d4">
-                    <span class="project-tag">HTML · CSS · JS</span>
-                    <h3>Portfolio Website</h3>
-                    <p>This portfolio — designed and built from scratch with clean HTML, CSS, and vanilla JavaScript animations.</p>
-                    <div class="project-card-footer">
-                        <a href="https://github.com/Thapa896" class="project-link" target="_blank">View Source &rarr;</a>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- ── CONTACT ── -->
     <section id="contact">
-        <div class="section-inner">
-            <div class="contact-card reveal">
-                <p class="section-label">Let's connect</p>
-                <h2>Get In Touch</h2>
-                <p>Whether you have a project in mind, a question, or just want to say hi — I'd love to hear from you.</p>
-                <a href="mailto:prasusthapa@email.com" class="btn btn-primary">
-                    ✉️ &nbsp;Send me an email
-                </a>
-                <div class="social-links">
-                    <a href="https://github.com/Thapa896" target="_blank" class="social-link">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        <div class="s-inner">
+            <div class="s-header reveal">
+                <span class="s-num">04</span>
+                <h2 class="s-title">Contact</h2>
+            </div>
+            <div class="contact-panel reveal">
+                <div class="contact-left">
+                    <h3 class="contact-headline">
+                        Got an idea?<br>
+                        <span class="gold">Let's build it together.</span>
+                    </h3>
+                    <p class="contact-sub">Whether it's a project, collaboration, or just a hello — I'm always open.</p>
+                    <a href="mailto:prasusthapa@email.com" class="btn-primary btn-lg">
+                        Send Email
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg>
+                    </a>
+                </div>
+                <div class="contact-right">
+                    <a href="https://github.com/Thapa896" target="_blank" class="c-link">
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
                         GitHub
                     </a>
-                    <a href="mailto:prasusthapa@email.com" class="social-link">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
-                        Email
-                    </a>
-                    <a href="https://linkedin.com/in/prasus-thapa" target="_blank" class="social-link">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    <a href="https://linkedin.com/in/prasus-thapa" target="_blank" class="c-link">
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                         LinkedIn
+                    </a>
+                    <a href="mailto:prasusthapa@email.com" class="c-link">
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+                        Email
                     </a>
                 </div>
             </div>
@@ -157,42 +321,10 @@
     </section>
 
     <footer>
-        <p>Designed &amp; built by <span>Prasus Thapa</span> &nbsp;·&nbsp; © 2026</p>
+        <span>Designed &amp; built by <em>Prasus Thapa</em></span>
+        <span>&copy; 2026</span>
     </footer>
 
-    <script>
-        // Typing animation
-        const roles = ['Web Developer.', 'Student.', 'Tech Enthusiast.', 'Problem Solver.'];
-        let roleIndex = 0, charIndex = 0, isDeleting = false;
-        const el = document.getElementById('typed-text');
-
-        function type() {
-            const current = roles[roleIndex];
-            el.textContent = isDeleting
-                ? current.substring(0, charIndex - 1)
-                : current.substring(0, charIndex + 1);
-
-            isDeleting ? charIndex-- : charIndex++;
-
-            let speed = isDeleting ? 55 : 95;
-            if (!isDeleting && charIndex === current.length) { speed = 1800; isDeleting = true; }
-            else if (isDeleting && charIndex === 0) { isDeleting = false; roleIndex = (roleIndex + 1) % roles.length; speed = 380; }
-
-            setTimeout(type, speed);
-        }
-        type();
-
-        // Scroll reveal
-        const observer = new IntersectionObserver(
-            entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
-            { threshold: 0.1 }
-        );
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-        // Navbar shadow on scroll
-        window.addEventListener('scroll', () => {
-            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
