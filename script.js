@@ -1,32 +1,39 @@
-// ── CUSTOM CURSOR ──
+// ── CUSTOM CURSOR (mouse only) ──
 const dot  = document.getElementById('curDot');
 const ring = document.getElementById('curRing');
-let mx = 0, my = 0, rx = 0, ry = 0;
 
-document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    dot.style.transform = `translate(${mx - 3}px, ${my - 3}px)`;
-});
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    let mx = 0, my = 0, rx = 0, ry = 0;
 
-(function tick() {
-    rx += (mx - rx) * 0.11;
-    ry += (my - ry) * 0.11;
-    ring.style.transform = `translate(${rx - 15}px, ${ry - 15}px)`;
-    requestAnimationFrame(tick);
-})();
-
-document.querySelectorAll('a, button, .sk-item, .proj-row').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-        dot.style.width  = '10px'; dot.style.height  = '10px';
-        ring.style.width = '46px'; ring.style.height = '46px';
-        ring.style.borderColor = 'rgba(200,169,110,.75)';
+    document.addEventListener('mousemove', e => {
+        mx = e.clientX; my = e.clientY;
+        dot.style.transform = `translate(${mx - 3}px, ${my - 3}px)`;
     });
-    el.addEventListener('mouseleave', () => {
-        dot.style.width  = '6px';  dot.style.height  = '6px';
-        ring.style.width = '30px'; ring.style.height = '30px';
-        ring.style.borderColor = 'rgba(200,169,110,.45)';
+
+    (function tick() {
+        rx += (mx - rx) * 0.11;
+        ry += (my - ry) * 0.11;
+        ring.style.transform = `translate(${rx - 15}px, ${ry - 15}px)`;
+        requestAnimationFrame(tick);
+    })();
+
+    document.querySelectorAll('a, button, .sk-item, .proj-row').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            dot.style.width  = '10px'; dot.style.height  = '10px';
+            ring.style.width = '46px'; ring.style.height = '46px';
+            ring.style.borderColor = 'rgba(240,238,235,.75)';
+        });
+        el.addEventListener('mouseleave', () => {
+            dot.style.width  = '6px';  dot.style.height  = '6px';
+            ring.style.width = '30px'; ring.style.height = '30px';
+            ring.style.borderColor = 'rgba(240,238,235,.45)';
+        });
     });
-});
+} else {
+    dot.style.display  = 'none';
+    ring.style.display = 'none';
+    document.body.style.cursor = 'auto';
+}
 
 // ── SCROLL REVEAL ──
 const revObs = new IntersectionObserver(
